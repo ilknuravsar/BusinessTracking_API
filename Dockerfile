@@ -17,7 +17,7 @@ WORKDIR "/src/API"
 RUN dotnet build "./API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "./API.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./API.csproj" -c Release -o /app/publish /p:UseAppHost=false /p:GenerateDocumentationFile=true
 
 FROM base AS final
 WORKDIR /app
