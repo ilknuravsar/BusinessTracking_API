@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+we8pt17I60=",
+  "dgSpecHash": "PNZ3jDvEKBk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\BusinessTrackingAPI\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

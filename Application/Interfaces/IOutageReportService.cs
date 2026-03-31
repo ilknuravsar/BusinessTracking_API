@@ -14,7 +14,7 @@ namespace Application.Interfaces
     {
         Task<ApiResponse<OutageReportDto>> CreateAsync(CreateReportRequest request,Guid createdById,CancellationToken ct = default);
 
-        OutageReport Create(string title, string description, string location, Priority priority, Guid createdById);
+        OutageReport Create(string title, string description, string location, Priority priority, Guid createdById, ReportStatus status);
 
         Task<ApiResponse<PaginatedResult<OutageReportDto>>> GetAllAsync(ReportFilterRequest filter,Guid? userId,CancellationToken ct = default);
 

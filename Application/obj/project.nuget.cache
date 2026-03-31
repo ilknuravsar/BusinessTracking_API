@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DYGBVGMJ6us=",
+  "dgSpecHash": "DQmrewcoqDQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\BusinessTrackingAPI\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
@@ -52,9 +52,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "'AutoMapper' 12.0.0 paketinde önem derecesi yüksek olan bilinen bir https://github.com/advisories/GHSA-rvv3-g6hj-g44x güvenlik açığı var",
-      "projectPath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\Application\\Application.csproj",
+      "projectPath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\BusinessTrackingAPI\\Application\\Application.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\Application\\Application.csproj",
+      "filePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\BusinessTrackingAPI\\Application\\Application.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net8.0"

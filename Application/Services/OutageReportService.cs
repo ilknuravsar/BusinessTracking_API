@@ -33,19 +33,13 @@ namespace Application.Services
                 throw new DuplicateLocationException(request.Location);
             }
 
-            //var report = OutageReport.Create(
-            //    request.Title,
-            //    request.Description,
-            //    request.Location,
-            //    request.Priority,
-            //    createdById);
-
             var report = Create(
                     request.Title,
                     request.Description,
                     request.Location,
                     request.Priority,
-                    createdById
+                    createdById,
+                    ReportStatus.New
                 );
 
             await _repo.AddAsync(report, ct);
@@ -56,11 +50,10 @@ namespace Application.Services
             var dto = _mapper.Map<OutageReportDto>(report);
             return ApiResponse<OutageReportDto>.Ok(
                 dto,
-                //ToDto(report),
                 "Report created successfully.");
         }
 
-      public OutageReport Create(string title,string description,string location,Priority priority, Guid createdById)
+      public OutageReport Create(string title,string description,string location,Priority priority, Guid createdById, ReportStatus status)
       {
             return new OutageReport
             {
@@ -69,7 +62,7 @@ namespace Application.Services
                 Description = description,
                 Location = location,
                 Priority = priority,
-                Status = ReportStatus.New,
+                Status = status,
                 CreatedById = createdById,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
@@ -145,7 +138,6 @@ namespace Application.Services
 
             return ApiResponse<OutageReportDto>.Ok(
                 dto,
-                //ToDto(report),
                 "Status updated successfully.");
         }
 

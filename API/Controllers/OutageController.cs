@@ -2,7 +2,6 @@
 using Application.DTOs;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Security.Claims;
@@ -21,7 +20,6 @@ namespace API.Controllers
             _service = service;
         }
 
-        // Yeni Bildirim Oluşturma
         /// <summary>
         /// Sisteme yeni bir arıza bildirimi kaydeder.
         /// </summary>
@@ -43,7 +41,7 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = result.Data!.Id }, result);
         }
 
-        // Listeleme
+
         /// <summary>
         /// Arıza bildirimlerini filtreleyerek ve sayfalayarak listeler.
         /// </summary>
@@ -62,7 +60,6 @@ namespace API.Controllers
             return Ok(result);
         }
 
-        //Bildirim Detayı 
         /// <summary>
         /// Belirli bir arıza bildiriminin detaylarını getirir.
         /// </summary>

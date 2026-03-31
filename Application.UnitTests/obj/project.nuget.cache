@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m8/AXgUnbq4=",
+  "dgSpecHash": "WCW1rTQWduU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\Application.UnitTests\\Application.UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\BusinessTrackingAPI\\Application.UnitTests\\Application.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
@@ -71,9 +71,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "'AutoMapper' 12.0.0 paketinde önem derecesi yüksek olan bilinen bir https://github.com/advisories/GHSA-rvv3-g6hj-g44x güvenlik açığı var",
-      "projectPath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\Application.UnitTests\\Application.UnitTests.csproj",
+      "projectPath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\BusinessTrackingAPI\\Application.UnitTests\\Application.UnitTests.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\Application.UnitTests\\Application.UnitTests.csproj",
+      "filePath": "C:\\Users\\Furkan\\source\\repos\\Projects\\BusinessTrackingSystem\\BusinessTrackingAPI\\Application.UnitTests\\Application.UnitTests.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net8.0"

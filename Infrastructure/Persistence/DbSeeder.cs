@@ -1,14 +1,8 @@
 ﻿using Application.Interfaces;
-using Application.Services;
 using Domain.Entities;
 using Domain.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence
 {
@@ -44,18 +38,18 @@ namespace Infrastructure.Persistence
          
             var reportsToSeed = new List<OutageReport>
             {
-                _service.Create("Trafo Arızası", "Ana trafo ünitesi devre dışı kaldı.", "Ankara/Çankaya", Priority.High, admin.Id),
-                _service.Create("Kablo Hasarı", "Yer altı ana besleme hattında kopma mevcut.", "İstanbul/Kadıköy", Priority.High, user.Id),
-                _service.Create("Sayaç Arızası", "Akıllı sayaç merkezi sisteme yanıt vermiyor.", "İzmir/Bornova", Priority.Medium, user.Id),
-                _service.Create("Sokak Aydınlatma Sorunu", "10 adet sokak lambası yanmıyor.", "Bursa/Nilüfer", Priority.Low, furkan.Id),
-                _service.Create("Voltaj Dalgalanması", "Bölge genelinde stabil olmayan gerilim tespit edildi.", "Ankara/Keçiören", Priority.High, furkan.Id),
-                _service.Create("Sigorta Patlaması", "Binadaki ana bina sigortası attı.", "İstanbul/Beşiktaş", Priority.Medium, admin.Id),
-                _service.Create("Genel Elektrik Kesintisi", "Tüm blok genelinde enerji yok.", "İzmir/Konak", Priority.High, user.Id),
-                _service.Create("Havai Hat Hasarı", "Fırtına nedeniyle havai hatlarda kopma meydana geldi.", "Antalya/Muratpaşa", Priority.High, furkan.Id),
-                _service.Create("Planlı Bakım", "Planlı şebeke iyileştirme ve bakım çalışması.", "Bursa/Osmangazi", Priority.Low, admin.Id),
-                _service.Create("Trafo Merkezi Arızası", "İkincil trafo merkezi çalışmıyor.", "Ankara/Mamak", Priority.Medium, user.Id),
-                _service.Create("Kaçak Kullanım Şüphesi", "Tespit edilen şüpheli yasadışı bağlantı.", "İstanbul/Fatih", Priority.Medium, admin.Id),
-                _service.Create("Jeneratör Arızası", "Yedek jeneratör devreye girmiyor.", "İzmir/Karşıyaka", Priority.Low, furkan.Id),
+                _service.Create("Trafo Arızası", "Ana trafo ünitesi devre dışı kaldı.", "Ankara/Çankaya", Priority.High, admin.Id, ReportStatus.Assigned),
+                _service.Create("Kablo Hasarı", "Yer altı ana besleme hattında kopma mevcut.", "İstanbul/Kadıköy", Priority.High, user.Id, ReportStatus.New),
+                _service.Create("Sayaç Arızası", "Akıllı sayaç merkezi sisteme yanıt vermiyor.", "İzmir/Bornova", Priority.Medium, user.Id,ReportStatus.InProgress),
+                _service.Create("Sokak Aydınlatma Sorunu", "10 adet sokak lambası yanmıyor.", "Bursa/Nilüfer", Priority.Low, furkan.Id, ReportStatus.Cancelled),
+                _service.Create("Voltaj Dalgalanması", "Bölge genelinde stabil olmayan gerilim tespit edildi.", "Ankara/Keçiören", Priority.High, furkan.Id,ReportStatus.UnderReview),
+                _service.Create("Sigorta Patlaması", "Binadaki ana bina sigortası attı.", "İstanbul/Beşiktaş", Priority.Medium, admin.Id,ReportStatus.InProgress),
+                _service.Create("Genel Elektrik Kesintisi", "Tüm blok genelinde enerji yok.", "İzmir/Konak", Priority.High, user.Id,ReportStatus.UnderReview),
+                _service.Create("Havai Hat Hasarı", "Fırtına nedeniyle havai hatlarda kopma meydana geldi.", "Antalya/Muratpaşa", Priority.High, furkan.Id,ReportStatus.Assigned),
+                _service.Create("Planlı Bakım", "Planlı şebeke iyileştirme ve bakım çalışması.", "Bursa/Osmangazi", Priority.Low, admin.Id, ReportStatus.Completed),
+                _service.Create("Trafo Merkezi Arızası", "İkincil trafo merkezi çalışmıyor.", "Ankara/Mamak", Priority.Medium, user.Id,ReportStatus.Cancelled),
+                _service.Create("Kaçak Kullanım Şüphesi", "Tespit edilen şüpheli yasadışı bağlantı.", "İstanbul/Fatih", Priority.Medium, admin.Id,ReportStatus.Unfounded),
+                _service.Create("Jeneratör Arızası", "Yedek jeneratör devreye girmiyor.", "İzmir/Karşıyaka", Priority.Low, furkan.Id,ReportStatus.Completed),
             };
 
             foreach (var report in reportsToSeed)
