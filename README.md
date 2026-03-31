@@ -16,7 +16,7 @@ Elektrik dağıtım şirketinin Arıza Takip Sistemi (Outage Management System) 
 
 ## Kullanılan Kütüphaneler
 
-** Veritabanı ve ORM (Entity Framework Core) **
+**Veritabanı ve ORM (Entity Framework Core)**
 
    - Microsoft.EntityFrameworkCore
 
@@ -30,7 +30,7 @@ Elektrik dağıtım şirketinin Arıza Takip Sistemi (Outage Management System) 
 
    - Microsoft.AspNetCore.Identity.EntityFrameworkCore
 
-** Kimlik Doğrulama ve Güvenlik (Identity & JWT) **
+**Kimlik Doğrulama ve Güvenlik (Identity & JWT)**
 
    - Microsoft.AspNetCore.Authentication.JwtBearer
 
@@ -38,7 +38,7 @@ Elektrik dağıtım şirketinin Arıza Takip Sistemi (Outage Management System) 
 
    - Microsoft.Extensions.Identity.Stores
 
-** Eşleme ve Dokümantasyon (AutoMapper & Swagger)**
+**Eşleme ve Dokümantasyon (AutoMapper & Swagger)**
 
    - AutoMapper.Extensions.Microsoft.DependencyInjection
 
@@ -46,7 +46,7 @@ Elektrik dağıtım şirketinin Arıza Takip Sistemi (Outage Management System) 
 
    -AutoMapper
 
-** Test (xUnit & Moq)**
+**Test (xUnit & Moq)**
 
    - xunit.runner.visualstudio
 
@@ -57,19 +57,19 @@ Elektrik dağıtım şirketinin Arıza Takip Sistemi (Outage Management System) 
 
 ##  Arıza Kaydı Durum Yönetimi (State Machine)
 
-**New(Yeni) -> UnderReview(İnceleniyor), Cancelled(İptal Edildi)
+**New(Yeni)** -> UnderReview(İnceleniyor), Cancelled(İptal Edildi)
 
-**UnderReview(İnceleniyor) -> Assigned(Atandı), Unfounded(Asılsız), Cancelled(İptal Edildi)
+**UnderReview(İnceleniyor)** -> Assigned(Atandı), Unfounded(Asılsız), Cancelled(İptal Edildi)
 
-**Assigned(Atandı) -> InProgress(Devam Ediyor), Cancelled(İptal Edildi)
+**Assigned(Atandı)** -> InProgress(Devam Ediyor), Cancelled(İptal Edildi)
 
-**InProgress(Devam Ediyor) -> Completed(Tamamlandı), Cancelled(İptal Edildi)
+**InProgress(Devam Ediyor)** -> Completed(Tamamlandı), Cancelled(İptal Edildi)
 
-**Completed(Tamamlandı) -> (Son Durum - Değiştirilemez)
+**Completed(Tamamlandı)** -> (Son Durum - Değiştirilemez)
 
-**Cancelled(İptal Edildi) -> (Son Durum - Değiştirilemez)
+**Cancelled(İptal Edildi)** -> (Son Durum - Değiştirilemez)
 
-**Unfounded(Asılsız) -> (Son Durum - Değiştirilemez) 
+**Unfounded(Asılsız)** -> (Son Durum - Değiştirilemez) 
 
 ## Endpoint'ler ve Kullanımları
 
