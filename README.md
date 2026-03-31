@@ -130,6 +130,7 @@ Bu yöntem için makinenizde .NET 8 SDK ve MSSQL Server kurulu olmalıdır.
 Eğer Visual Studio kullanıyorsanız, şu komutu çalıştırmanız yeterlidir:
 Default Project olarak Infrastructure katmanını seçin.
 Konsola şu komutu yazın: Update-Database
+
 **Yöntem B: .NET CLI (Terminal)**
 VS Code veya terminal kullanıyorsanız, proje kök dizininde şu komutu çalıştırın:
 dotnet ef database update --project Infrastructure --startup-project API
@@ -137,6 +138,7 @@ dotnet ef database update --project Infrastructure --startup-project API
 3. Projeyi Başlatma: API klasörüne gidip projeyi normal .NET uygulaması olarak çalıştırın:
 
 dotnet restore
+
 dotnet run --project API
 
 ## Yerel Swagger Dokümantasyonu: 
