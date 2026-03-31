@@ -44,7 +44,7 @@ Elektrik dağıtım şirketinin Arıza Takip Sistemi (Outage Management System) 
 
    - Swashbuckle.AspNetCore
 
-   -AutoMapper
+   - AutoMapper
 
 **Test (xUnit & Moq)**
 
